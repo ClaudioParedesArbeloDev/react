@@ -19,11 +19,10 @@ const ItemCount = () => {
     return (
         //Renderizar
         <div className='itemCount'>
-            <h3>ItemCount</h3>
             <div className='count'>
-                <button onClick={increment}>+</button>
-                <p>{count}</p>
                 <button onClick={decrement}>-</button>
+                <p>{count}</p>
+                <button onClick={increment}>+</button>
             </div>
         </div>
     )

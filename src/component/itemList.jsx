@@ -1,44 +1,51 @@
 import Item from './item'
 
+
 function ItemList() {
-    const listaProductos = [
-        {
-            id: 1,
-            nombre: "Remera",
-            descripcion: "Remera es un producto de la familia de remeras",
-            precio: 15,
-            stock: 10,
-        },
-        {
-            id: 2,
-            nombre: "Short",
-            descripcion: "Short es un producto de la familia de shorts",
-            precio: 25,
-            stock: 9,
-        },
-        {
-            id: 3,
-            nombre: "Pantalon",
-            descripcion: "Pantalon es un producto de la familia de pantalones",
-            precio: 35,
-            stock: 8,
-        },
-        {
-            id: 4,
-            nombre: "Camiseta",
-            descripcion: "Camiseta es un producto de la familia de camisetas",
-            precio: 45,
-            stock: 7,
-        },
-    ]
-
     
-    const listaDeProductosRenderizados = listaProductos.map(productos => (<Item key={productos.id} id={"producto" + productos.id} data={productos}/>))
 
+   
+   const listaDeProductos = [
+       {
+        id: 1,
+        nombre: "Producto 1",
+        precio: 100,
+        stock: 10,
+        descripcion: "Este es un producto de ejemplo",
+        categoria: "construccion",
+    },
+    {
+        id: 2,
+        nombre: "Producto 2",
+        precio: 200,
+        stock: 20,
+        descripcion: "Este es un producto de ejemplo",
+        categoria: "hogar",
+    },
+     {
+        id: 3,
+        nombre: "Producto 3",
+        precio: 300,
+        stock: 30,
+        descripcion: "Este es un producto de ejemplo",
+        categoria: "cocina",
+    },
+     {
+        id: 4,
+        nombre: "Producto 4",
+        precio: 400,
+        stock: 40,
+        descripcion: "Este es un producto de ejemplo",
+        categoria: "cocina",
+    },
+]   
+
+    const listaDeItems = listaDeProductos.map(productos => <Item key={productos.id} data={productos} />)
+    
     return (
         <div>
-            <h2>ItemList</h2>
-            {listaDeProductosRenderizados}
+            <h3>Lista de Productos</h3>
+            {listaDeItems}
             
         </div>
     )

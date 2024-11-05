@@ -1,9 +1,13 @@
+import Navbar from '../component/navbar/navbar'
 import ItemList from './itemList'
 
+
 function ItemListConteiner() {
+
     return (
         <div className='itemListConteiner'>
-            <h2>ItemListConteiner</h2>
+            <Navbar />
+            <h2>Productos</h2>
             <ItemList />
         </div>
     )
