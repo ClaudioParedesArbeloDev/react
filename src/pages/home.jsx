@@ -1,4 +1,5 @@
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
     
@@ -20,13 +21,15 @@ function Home() {
     
 
     return (
-        <div className='flex flex-wrap m-10'>
+        <div className='flex flex-wrap m-10 md:justify-center'>
             {products.map((product) => (
+                <Link to={`/product/${product.id}`} key={product.id} >
                 <div key={product.id} className='flex flex-col border items-center  my-8 rounded-md p-8 h-[450px] justify-between md:w-[300px] md:m-8'>
                     <h2 className='text-xl font-bold text-center'>{product.title}</h2>
                     <img src={product.image} alt={product.name} className='w-3/6'/>
-                    <p className='text-3xl py-4'> ${product.price}</p>
+                    <p className='text-2xl py-4'>Precio ${product.price}</p>
                 </div>
+                </Link>
             ))}
                
         </div>
